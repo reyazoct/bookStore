@@ -17,4 +17,8 @@ describe "BookStore" do
   it "test two different book" do
     expect(book.calculate_price([1, 2])).to eq 15.20
   end
+
+  it "test three different books" do
+    expect(book.calculate_price([1,2,3])).to eq 21.60
+  end
 end
