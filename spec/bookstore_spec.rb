@@ -7,10 +7,14 @@ describe "BookStore" do
   end
 
   it "test for two same book" do
-    expect(book.calculate_price([2,2])).to eq 16.00
+    expect(book.calculate_price([2, 2])).to eq 16.00
   end
 
   it "test empty basket" do
-    expect(book.calculate_price([])). to eq 0.00
+    expect(book.calculate_price([])).to eq 0.00
+  end
+
+  it "test two different book" do
+    expect(book.calculate_price([1, 2])).to eq 15.20
   end
 end
