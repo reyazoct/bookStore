@@ -19,18 +19,30 @@ describe "BookStore" do
   end
 
   it "test three different books" do
-    expect(book.calculate_price([1,2,3])).to eq 21.60
+    expect(book.calculate_price([1, 2, 3])).to eq 21.60
   end
 
   it "test four different books" do
-    expect(book.calculate_price([1,2,3,4])).to eq 25.60
+    expect(book.calculate_price([1, 2, 3, 4])).to eq 25.60
   end
 
   it "test five different books" do
-    expect(book.calculate_price([1,2,3,4,5])).to eq 30.00
+    expect(book.calculate_price([1, 2, 3, 4, 5])).to eq 30.00
   end
 
   it "test for [1,1,2,2,3,3,4,5]" do
-    expect(book.calculate_price([1,1,2,2,3,3,4,5])).to eq 51.60
+    expect(book.calculate_price([1, 1, 2, 2, 3, 3, 4, 5])).to eq 51.60
+  end
+
+  it "test for [1,1,2,3,4,4,5,5]" do
+    expect(book.calculate_price([1, 1, 2, 3, 4, 4, 5, 5])).to eq 51.60
+  end
+
+  it "test for [1,1,2,2,3,4]" do
+    expect(book.calculate_price([1, 1, 2, 2, 3, 4])).to eq 40.80
+  end
+
+  it "test for [1,1,2,2,3,3,4,4,5,5]" do
+    expect(book.calculate_price([1, 1, 2, 2, 3, 3, 4, 4, 5, 5])).to eq 60.00
   end
 end
